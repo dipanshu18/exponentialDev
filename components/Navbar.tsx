@@ -1,6 +1,33 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 export default function Navbar() {
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+
+      // You can adjust the scroll threshold based on your design
+      setIsSticky(offset > 100);
+    };
+
+    // Attach the scroll event listener when the component mounts
+    window.addEventListener("scroll", handleScroll);
+
+    // Remove the scroll event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <div id="home" className="absolute navbar">
+    <div
+      id="home"
+      className={`absolute top-0 navbar ${
+        isSticky ? "sticky z-10 bg-base-300 shadow" : ""
+      }`}
+    >
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -59,7 +86,7 @@ export default function Navbar() {
       </div>
       <div className="navbar-end">
         <a href="#contact-us" className="btn btn-primary">
-          Let's get started
+          Let&#39;s get started
         </a>
       </div>
     </div>

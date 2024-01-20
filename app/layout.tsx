@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: "300",
+});
 
 export const metadata: Metadata = {
   title: "Exponential Dev",
@@ -17,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html className="scroll-smooth" lang="en">
-      <body className={inter.className}>
+      <body className={poppins.className}>
         <Navbar />
         <main>{children}</main>
       </body>

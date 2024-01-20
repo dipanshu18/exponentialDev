@@ -29,10 +29,10 @@ export default function Home() {
       </header>
 
       <section id="what-we-do" className="min-h-screen py-16 bg-base-300">
-        <h1 className="text-center font-extrabold text-3xl md:text-4xl lg:text-5xl mb-14">
+        <h1 className="text-center font-extrabold text-4xl lg:text-5xl mb-14">
           What we do?
         </h1>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+        <div className="px-10 flex justify-center items-center flex-wrap gap-10 max-w-2xl md:max-w-5xl lg:max-w-7xl mx-auto">
           <div className="card w-96 shadow-xl bg-base-100">
             <figure>
               <img
@@ -84,10 +84,10 @@ export default function Home() {
       </section>
 
       <section id="projects" className="min-h-screen py-16 bg-base-200">
-        <h1 className="text-center font-extrabold text-3xl md:text-4xl lg:text-5xl mb-14">
+        <h1 className="text-center font-extrabold text-4xl lg:text-5xl mb-14">
           Our Projects
         </h1>
-        <div className="max-w-5xl mx-auto grid gap-20">
+        <div className="max-w-5xl mx-10 lg:mx-auto grid md:grid-cols-2 lg:grid-cols-1 gap-10">
           <div className="card lg:card-side bg-base-100 shadow-xl">
             <figure>
               <img
@@ -159,11 +159,11 @@ export default function Home() {
       </section>
 
       <section id="testimonials" className="py-16 bg-base-100">
-        <h1 className="text-center font-extrabold text-3xl md:text-4xl lg:text-5xl mb-14">
+        <h1 className="text-center font-extrabold text-4xl lg:text-5xl mb-14">
           Testimonials
         </h1>
 
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
+        <div className="max-w-5xl mx-10 lg:mx-auto grid lg:grid-cols-2 gap-10">
           <div className="card card-side bg-base-300 shadow-xl">
             <figure>
               <img
@@ -200,7 +200,7 @@ export default function Home() {
       </section>
 
       <section id="contact-us" className="min-h-screen py-16 bg-base-200">
-        <h1 className="text-center font-extrabold text-3xl md:text-4xl lg:text-5xl mb-14">
+        <h1 className="text-center font-extrabold text-4xl lg:text-5xl mb-14">
           Contact us
         </h1>
 
