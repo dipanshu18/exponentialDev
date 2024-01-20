@@ -1,6 +1,8 @@
 "use client";
 
 import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { Toaster, toast } from "sonner";
 import Spinner from "./Spinner";
 
@@ -11,13 +13,26 @@ type MailData = {
   message: string;
 };
 
+const mailSchema = z.object({
+  name: z.string().min(5, "Name must be more than 5 characters long..."),
+  email: z.string().email(),
+  subject: z
+    .string()
+    .min(10, "Subject must be more than 10 characters long..."),
+  message: z
+    .string()
+    .min(30, "Message must be more than 30 characters long..."),
+});
+
 export default function ContactUsForm() {
   const {
     register,
     handleSubmit,
     reset,
-    formState: { isSubmitting },
-  } = useForm<MailData>();
+    formState: { isSubmitting, errors },
+  } = useForm<MailData>({
+    resolver: zodResolver(mailSchema),
+  });
 
   async function mailHandler(data: MailData) {
     try {
@@ -54,11 +69,14 @@ export default function ContactUsForm() {
           <input
             id="name"
             type="text"
-            {...register("name", { min: 5 })}
+            {...register("name", { required: true, min: 5 })}
             placeholder="Dipanshu Torawane"
             className="input input-bordered w-full"
             required
           />
+          {errors.name && (
+            <span className="text-red-600">{errors.name.message}</span>
+          )}
         </div>
         <div className="mb-5">
           <label htmlFor="email" className="block mb-2 text-sm font-medium">
@@ -67,11 +85,14 @@ export default function ContactUsForm() {
           <input
             id="email"
             type="email"
-            {...register("email")}
+            {...register("email", { required: true })}
             placeholder="dipanshu@gmail.com"
             className="input input-bordered w-full"
             required
           />
+          {errors.email && (
+            <span className="text-red-600">{errors.email.message}</span>
+          )}
         </div>
         <div className="mb-5">
           <label htmlFor="subject" className="block mb-2 text-sm font-medium">
@@ -80,11 +101,14 @@ export default function ContactUsForm() {
           <input
             id="subject"
             type="text"
-            {...register("subject", { min: 20, max: 100 })}
+            {...register("subject", { required: true, min: 20, max: 100 })}
             placeholder="Regarding landing page development"
             className="input input-bordered w-full"
             required
           />
+          {errors.subject && (
+            <span className="text-red-600">{errors.subject.message}</span>
+          )}
         </div>
         <div className="mb-5">
           <label htmlFor="message" className="block mb-2 text-sm font-medium">
@@ -93,11 +117,14 @@ export default function ContactUsForm() {
           <textarea
             id="message"
             className="textarea textarea-bordered w-full"
-            {...register("message", { min: 50 })}
+            {...register("message", { required: true, min: 50 })}
             placeholder="Your message"
             rows={10}
             required
           ></textarea>
+          {errors.message && (
+            <span className="text-red-600">{errors.message.message}</span>
+          )}
         </div>
         <div className="text-center my-10">
           <div className="flex justify-center items-center">
