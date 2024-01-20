@@ -1,3 +1,5 @@
+import ContactUsForm from "@/components/ContactUsForm";
+
 export default function Home() {
   return (
     <>
@@ -10,12 +12,10 @@ export default function Home() {
           }}
         >
           <div className="hero-overlay bg-opacity-60"></div>
-          <div className="hero-content text-center text-neutral-content">
+          <div className="hero-content text-center">
             <div className="max-w-md">
-              <h1 className="mb-5 text-5xl font-bold text-base-200">
-                Hello there
-              </h1>
-              <p className="mb-5">
+              <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
+              <p className="mb-5 text-neutral-content">
                 Provident cupiditate voluptatem et in. Quaerat fugiat ut
                 assumenda excepturi exercitationem quasi. In deleniti eaque aut
                 repudiandae et a id nisi.
@@ -163,8 +163,8 @@ export default function Home() {
           Testimonials
         </h1>
 
-        <div className="max-w-5xl mx-10 lg:mx-auto grid lg:grid-cols-2 gap-10">
-          <div className="card card-side bg-base-300 shadow-xl">
+        <div className="max-w-3xl mx-10 md:mx-auto grid sm:grid-cols-2 gap-10">
+          <div className="card bg-base-300 shadow-xl">
             <figure>
               <img
                 src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg"
@@ -180,7 +180,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="card card-side bg-base-300 shadow-xl">
+          <div className="card bg-base-300 shadow-xl">
             <figure>
               <img
                 src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg"
@@ -199,46 +199,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact-us" className="min-h-screen py-16 bg-base-200">
+      <section id="contact-us" className="py-16 bg-base-200">
         <h1 className="text-center font-extrabold text-4xl lg:text-5xl mb-14">
           Contact us
         </h1>
 
-        <form className="max-w-md md:max-w-xl lg:max-w-2xl mx-auto ">
-          <div className="mb-5">
-            <label htmlFor="name" className="block mb-2 text-sm font-medium">
-              Your name
-            </label>
-            <input
-              type="text"
-              placeholder="Dipanshu Torawane"
-              className="input input-bordered w-full"
-            />
-          </div>
-          <div className="mb-5">
-            <label htmlFor="email" className="block mb-2 text-sm font-medium">
-              Your email
-            </label>
-            <input
-              type="text"
-              placeholder="dipanshu@gmail.com"
-              className="input input-bordered w-full"
-            />
-          </div>
-          <div className="mb-5">
-            <label htmlFor="message" className="block mb-2 text-sm font-medium">
-              Your message
-            </label>
-            <textarea
-              className="textarea textarea-bordered w-full"
-              placeholder="Your message"
-              rows={10}
-            ></textarea>
-          </div>
-          <div className="text-center my-10">
-            <button className="btn btn-primary">Send Message</button>
-          </div>
-        </form>
+        <ContactUsForm />
       </section>
 
       <footer className="footer items-center p-4 bg-neutral text-neutral-content">

@@ -48,7 +48,7 @@ export default function Navbar() {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 bg-base-300 shadow rounded-box w-52"
           >
             <li className="font-semibold">
               <a href="#what-we-do">What we do?</a>
@@ -64,7 +64,7 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
-        <a href="#home" className="btn btn-ghost text-xl">
+        <a href="#home" className="btn btn-ghost text-md md:text-xl">
           Exponential Dev
         </a>
       </div>
