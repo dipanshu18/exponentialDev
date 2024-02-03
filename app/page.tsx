@@ -1,27 +1,38 @@
 import ContactUsForm from "@/components/ContactUsForm";
+import Image from "next/image";
+import Webpage from "@/public/webpage.png";
+
+import MoinPic from "@/public/moin_headshot.png";
+import DipanshuPic from "@/public/dipanshu_headshot.png";
+
+import { CgWebsite } from "react-icons/cg";
+import { FaLinkedin, FaPenRuler, FaPhone, FaTwitter } from "react-icons/fa6";
+import { TbDeviceMobileCharging } from "react-icons/tb";
+import Link from "next/link";
+import Button from "@/components/Button";
 
 export default function Home() {
   return (
     <>
       <header>
-        <div
-          className="hero min-h-screen"
-          style={{
-            backgroundImage:
-              "url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)",
-          }}
-        >
-          <div className="hero-overlay bg-opacity-60"></div>
+        <div className="hero min-h-screen">
+          <div className="hero-overlay bg-base-100 bg-opacity-60"></div>
           <div className="hero-content text-center">
-            <div className="max-w-md">
-              <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-              <p className="mb-5 text-neutral-content">
-                Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                assumenda excepturi exercitationem quasi. In deleniti eaque aut
-                repudiandae et a id nisi.
+            <div>
+              <div className="max-w-9xl">
+                <h1 className="mb-5 text-3xl lg:text-5xl font-bold tracking-wider leading-relaxed">
+                  We craft software solutions for your ideas/business to achieve
+                  online success.
+                </h1>
+              </div>
+              <p className="mb-5 texl-xl lg:text-3xl text-slate-400">
+                We are your dedicated partners in expertly designed and innovate
+                solutions. Our team combines creativity and technical
+                proficiency to ensure your online presence stands out. We help
+                to take a step forward in the digital realm.
               </p>
               <a href="#contact-us">
-                <button className="btn btn-primary">Get Started</button>
+                <Button text="Get Started" />
               </a>
             </div>
           </div>
@@ -32,52 +43,48 @@ export default function Home() {
         <h1 className="text-center font-extrabold text-4xl lg:text-5xl mb-14">
           What we do?
         </h1>
-        <div className="px-10 flex justify-center items-center flex-wrap gap-10 max-w-2xl md:max-w-5xl lg:max-w-7xl mx-auto">
+        <div className="px-10 flex justify-center items-center flex-wrap lg:flex-nowrap gap-10 max-w-2xl md:max-w-5xl lg:max-w-7xl mx-auto">
           <div className="card w-96 shadow-xl bg-base-100">
-            <figure>
-              <img
-                src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                alt="Shoes"
-              />
+            <figure className="pt-10 text-9xl">
+              <CgWebsite />
             </figure>
             <div className="card-body">
-              <h2 className="card-title">Shoes!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div className="card-actions justify-end">
-                <button className="btn btn-primary">Buy Now</button>
-              </div>
+              <h2 className="card-title">Web Development</h2>
+              <p>
+                Full-stack web app with tech stack includes Reactjs, Nextjs,
+                TailwindCSS, Recoil, Redux-toolkit, RTK Query, GraphQL, Nodejs,
+                Express, Typescript, Prisma, PostgreSQL, MongoDB
+              </p>
+              <div className="card-actions justify-end"></div>
             </div>
           </div>
 
           <div className="card w-96 shadow-xl bg-base-100">
-            <figure>
-              <img
-                src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                alt="Shoes"
-              />
+            <figure className="pt-10 text-9xl">
+              <FaPenRuler />
             </figure>
             <div className="card-body">
-              <h2 className="card-title">Shoes!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div className="card-actions justify-end">
-                <button className="btn btn-primary">Buy Now</button>
-              </div>
+              <h2 className="card-title">Figma Design</h2>
+              <p>
+                Impressive mockups, web page design, landing pages and some
+                interesting designs for web apps/mobile apps using Figma.
+              </p>
+              <div className="card-actions justify-end"></div>
             </div>
           </div>
 
           <div className="card w-96 shadow-xl bg-base-100">
-            <figure>
-              <img
-                src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                alt="Shoes"
-              />
+            <figure className="pt-10 text-9xl">
+              <TbDeviceMobileCharging />
             </figure>
             <div className="card-body">
-              <h2 className="card-title">Shoes!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div className="card-actions justify-end">
-                <button className="btn btn-primary">Buy Now</button>
-              </div>
+              <h2 className="card-title">App Development</h2>
+              <p>
+                Mobile apps using cross-platform development tools like
+                React-Native, Flutter and Firebase. Fully-working mobile apps
+                with some animations and sleek-ui.
+              </p>
+              <div className="card-actions justify-end"></div>
             </div>
           </div>
         </div>
@@ -90,68 +97,56 @@ export default function Home() {
         <div className="max-w-5xl mx-10 lg:mx-auto grid md:grid-cols-2 lg:grid-cols-1 gap-10">
           <div className="card lg:card-side bg-base-100 shadow-xl">
             <figure>
-              <img
-                src="https://daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg"
-                alt="Album"
-              />
+              <Image src={Webpage} alt="Album" width={500} />
             </figure>
             <div className="card-body">
               <h2 className="card-title">New album is released!</h2>
               <p>Click the button to listen on Spotiwhy app.</p>
-              <div className="card-actions justify-end">
-                <button className="btn btn-primary">Listen</button>
-                <button className="btn btn-primary">Listen</button>
+              <div className="card-actions justify-end gap-8">
+                <Button text="Code" />
+                <Button text="Demo" />
               </div>
             </div>
           </div>
 
           <div className="card lg:card-side bg-base-100 shadow-xl">
             <figure>
-              <img
-                src="https://daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg"
-                alt="Album"
-              />
+              <Image src={Webpage} alt="Album" width={500} />
             </figure>
             <div className="card-body">
               <h2 className="card-title">New album is released!</h2>
               <p>Click the button to listen on Spotiwhy app.</p>
-              <div className="card-actions justify-end">
-                <button className="btn btn-primary">Listen</button>
-                <button className="btn btn-primary">Listen</button>
+              <div className="card-actions justify-end gap-8">
+                <Button text="Code" />
+                <Button text="Demo" />
               </div>
             </div>
           </div>
 
           <div className="card lg:card-side bg-base-100 shadow-xl">
             <figure>
-              <img
-                src="https://daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg"
-                alt="Album"
-              />
+              <Image src={Webpage} alt="Album" width={500} />
             </figure>
             <div className="card-body">
               <h2 className="card-title">New album is released!</h2>
               <p>Click the button to listen on Spotiwhy app.</p>
-              <div className="card-actions justify-end">
-                <button className="btn btn-primary">Listen</button>
-                <button className="btn btn-primary">Listen</button>
+              <div className="card-actions justify-end gap-8">
+                <Button text="Code" />
+                <Button text="Demo" />
               </div>
             </div>
           </div>
 
           <div className="card lg:card-side bg-base-100 shadow-xl">
             <figure>
-              <img
-                src="https://daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg"
-                alt="Album"
-              />
+              <Image src={Webpage} alt="Album" width={500} />
             </figure>
             <div className="card-body">
               <h2 className="card-title">New album is released!</h2>
               <p>Click the button to listen on Spotiwhy app.</p>
-              <div className="card-actions justify-end">
-                <button className="btn btn-primary">Listen</button>
-                <button className="btn btn-primary">Listen</button>
+              <div className="card-actions justify-end gap-8">
+                <Button text="Code" />
+                <Button text="Demo" />
               </div>
             </div>
           </div>
@@ -163,36 +158,76 @@ export default function Home() {
           Testimonials
         </h1>
 
-        <div className="max-w-3xl mx-10 md:mx-auto grid sm:grid-cols-2 gap-10">
-          <div className="card bg-base-300 shadow-xl">
-            <figure>
-              <img
-                src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg"
-                alt="Movie"
-              />
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8">
+          <div className="card w-2/3 bg-base-300 shadow-2xl">
+            <figure className="pt-10 mx-10 rounded-full">
+              <Image src={MoinPic} alt="Moin's Headshot" />
             </figure>
             <div className="card-body">
-              <h2 className="card-title">New movie is released!</h2>
+              <h2 className="card-title">Moin Hossain</h2>
               <p>Click the button to watch on Jetflix app.</p>
-              <div className="card-actions justify-end">
-                <button className="btn btn-primary">Watch</button>
-                <button className="btn btn-primary">Watch</button>
+              <div className="card-actions mt-5">
+                <Link href="/" className="btn btn-primary">
+                  <FaLinkedin />
+                  Linkedin
+                </Link>
+                <Link href="/" className="btn btn-primary">
+                  <FaTwitter />
+                  Twitter
+                </Link>
+                <button className="btn btn-primary">
+                  <FaPhone />
+                  Phone: +91-9167717292
+                </button>
               </div>
             </div>
           </div>
-          <div className="card bg-base-300 shadow-xl">
-            <figure>
-              <img
-                src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg"
-                alt="Movie"
-              />
+          <div className="card w-2/3 bg-base-300 shadow-2xl">
+            <figure className="pt-10 mx-10 rounded-full">
+              <Image src={DipanshuPic} alt="Dipanshu's Headshot" />
             </figure>
             <div className="card-body">
-              <h2 className="card-title">New movie is released!</h2>
-              <p>Click the button to watch on Jetflix app.</p>
-              <div className="card-actions justify-end">
-                <button className="btn btn-primary">Watch</button>
-                <button className="btn btn-primary">Watch</button>
+              <h2 className="card-title">Dipanshu Torawane</h2>
+              <p className="flex flex-col gap-4">
+                <span>
+                  I{`'`}m a 👨‍💻Full Stack Web Developer who enjoys creating web
+                  applications to deliver great and satisfactory user
+                  experiences. I love exploring new JavaScript frameworks,
+                  backend solutions, and emerging technologies to stay
+                  up-to-date with industry trends.
+                </span>
+                <span>My current tech toolkit includes:</span>
+                <span>
+                  Frontend: React.js, Next.js, Astro.js, TailwindCSS,
+                  Redux-Toolkit, RTK-Query, Recoil
+                </span>
+                <span>
+                  Backend: Typescript, Node.js, Express, Python, Flask, Django
+                </span>
+                <span>
+                  Databases: PostgreSQL, MongoDB Tools: GraphQL, PrismaORM
+                </span>
+                <span>Cloud: AWS, Azure</span>
+              </p>
+              <div className="card-actions mt-5">
+                <Link
+                  href="https://www.linkedin.com/in/dipanshu-torawane/"
+                  className="btn btn-primary"
+                >
+                  <FaLinkedin />
+                  Linkedin
+                </Link>
+                <Link
+                  href="https://twitter.com/dipanshu_twts"
+                  className="btn btn-primary"
+                >
+                  <FaTwitter />
+                  Twitter
+                </Link>
+                <button className="btn btn-primary">
+                  <FaPhone />
+                  Phone: +91-7990582647
+                </button>
               </div>
             </div>
           </div>

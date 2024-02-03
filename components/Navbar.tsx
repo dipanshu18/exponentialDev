@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Button from "./Button";
 
 export default function Navbar() {
   const [isSticky, setIsSticky] = useState(false);
@@ -25,7 +26,7 @@ export default function Navbar() {
     <div
       id="home"
       className={`absolute top-0 navbar ${
-        isSticky ? "sticky z-10 bg-base-300 shadow" : ""
+        isSticky ? "sticky z-10 bg-base-300" : ""
       }`}
     >
       <div className="navbar-start">
@@ -85,8 +86,8 @@ export default function Navbar() {
         </ul>
       </div>
       <div className="navbar-end">
-        <a href="#contact-us" className="btn btn-primary">
-          Let&#39;s get started
+        <a href="#contact-us">
+          <Button text="Let&#39;s get started" />
         </a>
       </div>
     </div>

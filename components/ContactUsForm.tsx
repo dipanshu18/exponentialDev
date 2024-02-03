@@ -5,6 +5,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Toaster, toast } from "sonner";
 import Spinner from "./Spinner";
+import { FaTelegramPlane } from "react-icons/fa";
 
 type MailData = {
   name: string;
@@ -130,7 +131,10 @@ export default function ContactUsForm() {
           <div className="flex justify-center items-center">
             {isSubmitting && <Spinner />}
           </div>
-          <button className="btn btn-primary">Send Message</button>
+          <button className="btn btn-primary">
+            <FaTelegramPlane />
+            Send Message
+          </button>
         </div>
       </form>
     </>
