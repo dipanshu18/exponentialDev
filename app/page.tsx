@@ -10,6 +10,7 @@ import { FaLinkedin, FaPenRuler, FaPhone, FaTwitter } from "react-icons/fa6";
 import { TbDeviceMobileCharging } from "react-icons/tb";
 import Link from "next/link";
 import Button from "@/components/Button";
+import CopyPhoneNoButton from "@/components/CopyPhoneNoButton";
 
 export default function Home() {
   return (
@@ -175,10 +176,7 @@ export default function Home() {
                   <FaTwitter />
                   Twitter
                 </Link>
-                <button className="btn btn-primary">
-                  <FaPhone />
-                  Phone: +91-9167717292
-                </button>
+                <CopyPhoneNoButton number="+91-9167717292" />
               </div>
             </div>
           </div>
@@ -224,10 +222,7 @@ export default function Home() {
                   <FaTwitter />
                   Twitter
                 </Link>
-                <button className="btn btn-primary">
-                  <FaPhone />
-                  Phone: +91-7990582647
-                </button>
+                <CopyPhoneNoButton number="+91-7990582647" />
               </div>
             </div>
           </div>
