@@ -159,8 +159,8 @@ export default function Home() {
           Testimonials
         </h1>
 
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8">
-          <div className="card w-2/3 bg-base-300 shadow-2xl">
+        <div className="mx-10 flex flex-col lg:flex-row items-center justify-center gap-4 md:gap-8">
+          <div className="card md:w-2/3 bg-base-300 shadow-2xl">
             <figure className="pt-10 mx-10 rounded-full">
               <Image src={MoinPic} alt="Moin's Headshot" />
             </figure>
@@ -180,7 +180,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="card w-2/3 bg-base-300 shadow-2xl">
+          <div className="card md:w-2/3 bg-base-300 shadow-2xl">
             <figure className="pt-10 mx-10 rounded-full">
               <Image src={DipanshuPic} alt="Dipanshu's Headshot" />
             </figure>

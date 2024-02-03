@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Button from "./Button";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isSticky, setIsSticky] = useState(false);
@@ -65,30 +66,30 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
-        <a href="#home" className="btn btn-ghost text-md md:text-xl">
+        <Link href="/" className="btn btn-ghost text-md md:text-xl">
           Exponential Dev
-        </a>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li className="font-semibold">
-            <a href="#what-we-do">What we do?</a>
+            <Link href="#what-we-do">What we do?</Link>
           </li>
           <li className="font-semibold">
-            <a href="#projects">Projects</a>
+            <Link href="#projects">Projects</Link>
           </li>
           <li className="font-semibold">
-            <a href="#testimonials">Testimonials</a>
+            <Link href="#testimonials">Testimonials</Link>
           </li>
           <li className="font-semibold">
-            <a href="#contact-us">Contact Us</a>
+            <Link href="#contact-us">Contact Us</Link>
           </li>
         </ul>
       </div>
       <div className="navbar-end">
-        <a href="#contact-us">
+        <Link href="#contact-us">
           <Button text="Let&#39;s get started" />
-        </a>
+        </Link>
       </div>
     </div>
   );
