@@ -166,7 +166,21 @@ export default function Home() {
             </figure>
             <div className="card-body">
               <h2 className="card-title">Moin Hossain</h2>
-              <p>Click the button to watch on Jetflix app.</p>
+              <p className="flex flex-col gap-4">
+                <span>
+                  I{`'`}m good at making websites with strong communication
+                  skills. I really enjoy creating web applications and
+                  connecting with new folks every day. I like trying out new
+                  easy-to-use tools and using AI to make software and
+                  businesses better. I possess a keen interest in exploring and
+                  utilizing emerging no-code tools.
+                </span>
+                <span>My current tech toolkit includes:</span>
+                <span>Frontend: Reactjs, TailwindCSS</span>
+                <span>Backend: Nodejs, Express</span>
+                <span>Programming Languages: Python, Javascript</span>
+                <span>Tools: PostgreSQL, MongoDB, AWS</span>
+              </p>
               <div className="card-actions mt-5">
                 <Link href="/" className="btn btn-primary">
                   <FaLinkedin />
