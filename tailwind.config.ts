@@ -6,7 +6,21 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  plugins: [require("daisyui")],
+  plugins: [
+    require("daisyui"),
+    require("tailwind-typewriter")({
+      wordsets: {
+        header: {
+          words: [
+            "Exponential Dev",
+            "We craft software solutions for your ideas/business to achieve online success.",
+          ],
+          delay: 1,
+          writeSpeed: 0.2,
+        },
+      },
+    }),
+  ],
   daisyui: {
     themes: false, // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
     darkTheme: "dark", // name of one of the included themes for dark mode

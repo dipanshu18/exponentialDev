@@ -21,10 +21,7 @@ export default function Home() {
           <div className="hero-content text-center">
             <div>
               <div className="max-w-9xl">
-                <h1 className="mb-5 text-3xl lg:text-5xl font-bold tracking-wider leading-relaxed">
-                  We craft software solutions for your ideas/business to achieve
-                  online success.
-                </h1>
+                <h1 className="type-header mb-5 text-3xl lg:text-5xl font-bold tracking-wider leading-relaxed"></h1>
               </div>
               <p className="mb-5 texl-xl lg:text-3xl text-slate-400">
                 We are your dedicated partners in expertly designed and innovate
