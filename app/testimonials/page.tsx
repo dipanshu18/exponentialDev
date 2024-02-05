@@ -22,12 +22,10 @@ export default function page() {
             <h2 className="card-title">Moin Hossain</h2>
             <p className="flex flex-col gap-4">
               <span>
-                I{`'`}m good at making websites with strong communication
-                skills. I really enjoy creating web applications and connecting
-                with new folks every day. I like trying out new easy-to-use
-                tools and using AI to make software and businesses better. I
-                possess a keen interest in exploring and utilizing emerging
-                no-code tools.
+                I enjoy creating web applications and connecting with new folks
+                every day. Also like trying out new easy-to-use tools and using
+                AI to make software and businesses better and have an interest
+                in exploring and utilizing emerging no-code tools.
               </span>
               <span>My current tech toolkit includes:</span>
               <span>Frontend: Reactjs, TailwindCSS</span>
