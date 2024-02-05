@@ -6,6 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Toaster, toast } from "sonner";
 import Spinner from "./Spinner";
 import { FaTelegramPlane } from "react-icons/fa";
+import Button from "./Button";
 
 type MailData = {
   name: string;
@@ -61,7 +62,7 @@ export default function ContactUsForm() {
       <Toaster richColors />
       <form
         onSubmit={handleSubmit(mailHandler)}
-        className="max-w-md md:max-w-xl lg:max-w-2xl mx-10 sm:mx-auto "
+        className="max-w-md md:max-w-xl lg:max-w-2xl mx-10 sm:mx-auto border border-slate-900 p-10 rounded-xl"
       >
         <div className="mb-5">
           <label htmlFor="name" className="block mb-2 text-sm font-medium">
@@ -72,7 +73,7 @@ export default function ContactUsForm() {
             type="text"
             {...register("name", { required: true, min: 5 })}
             placeholder="Dipanshu Torawane"
-            className="input input-bordered w-full"
+            className="input bg-slate-900 input-bordered w-full"
             required
           />
           {errors.name && (
@@ -88,7 +89,7 @@ export default function ContactUsForm() {
             type="email"
             {...register("email", { required: true })}
             placeholder="dipanshu@gmail.com"
-            className="input input-bordered w-full"
+            className="input bg-slate-900 input-bordered w-full"
             required
           />
           {errors.email && (
@@ -104,7 +105,7 @@ export default function ContactUsForm() {
             type="text"
             {...register("subject", { required: true, min: 20, max: 100 })}
             placeholder="Regarding landing page development"
-            className="input input-bordered w-full"
+            className="input bg-slate-900 input-bordered w-full"
             required
           />
           {errors.subject && (
@@ -117,7 +118,7 @@ export default function ContactUsForm() {
           </label>
           <textarea
             id="message"
-            className="textarea textarea-bordered w-full"
+            className="textarea bg-slate-900 textarea-bordered w-full"
             {...register("message", { required: true, min: 50 })}
             placeholder="Your message"
             rows={10}
@@ -131,10 +132,7 @@ export default function ContactUsForm() {
           <div className="flex justify-center items-center">
             {isSubmitting && <Spinner />}
           </div>
-          <button className="btn btn-primary">
-            <FaTelegramPlane />
-            Send Message
-          </button>
+          <Button text="Send Message" icon={<FaTelegramPlane />} />
         </div>
       </form>
     </>

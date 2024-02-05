@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import copy from "clipboard-copy";
+import Button from "./Button";
 import { FaPhoneAlt } from "react-icons/fa";
 
 export default function CopyPhoneNoButton({ number }: { number: string }) {
@@ -15,20 +16,24 @@ export default function CopyPhoneNoButton({ number }: { number: string }) {
       // Reset the copy state after 3 seconds
       setTimeout(() => {
         setIsCopied(false);
-      }, 3000);
+      }, 1000);
     } catch (error) {
       console.error("Error copying to clipboard", error);
     }
   };
 
   return (
-    <button className="btn btn-primary" onClick={handleCopyToClipboard}>
-      <FaPhoneAlt /> Phone: {number}
+    <>
+      <Button
+        text={`Phone: ${number}`}
+        icon={<FaPhoneAlt />}
+        onClick={handleCopyToClipboard}
+      />
       {isCopied && (
-        <span className="absolute -top-6 ml-4 px-4 py-2 rounded-3xl bg-green-600 text-white">
+        <span className="px-4 py-2 rounded-3xl bg-green-600 text-white">
           Copied!
         </span>
       )}
-    </button>
+    </>
   );
 }

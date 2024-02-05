@@ -1,38 +1,17 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import Button from "./Button";
 import Link from "next/link";
 
 export default function Navbar() {
-  const [isSticky, setIsSticky] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const offset = window.scrollY;
-
-      // You can adjust the scroll threshold based on your design
-      setIsSticky(offset > 100);
-    };
-
-    // Attach the scroll event listener when the component mounts
-    window.addEventListener("scroll", handleScroll);
-
-    // Remove the scroll event listener when the component unmounts
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
   return (
-    <div
-      id="home"
-      className={`absolute top-0 navbar ${
-        isSticky ? "sticky z-10 bg-base-300" : ""
-      }`}
-    >
+    <div id="home" className="navbar">
       <div className="navbar-start">
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+          <div
+            tabIndex={0}
+            role="button"
+            aria-label="menu"
+            className="btn btn-ghost lg:hidden"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -50,19 +29,19 @@ export default function Navbar() {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 bg-base-300 shadow rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-2xl rounded-box w-52"
           >
             <li className="font-semibold">
-              <a href="#what-we-do">What we do?</a>
+              <Link href="/what-we-do">What we do?</Link>
             </li>
             <li className="font-semibold">
-              <a href="#projects">Projects</a>
+              <Link href="/projects">Projects</Link>
             </li>
             <li className="font-semibold">
-              <a href="#testimonials">Testimonials</a>
+              <Link href="/testimonials">Testimonials</Link>
             </li>
             <li className="font-semibold">
-              <a href="#contact-us">Contact Us</a>
+              <Link href="/contact">Contact Us</Link>
             </li>
           </ul>
         </div>
@@ -73,21 +52,21 @@ export default function Navbar() {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li className="font-semibold">
-            <Link href="#what-we-do">What we do?</Link>
+            <Link href="/what-we-do">What we do?</Link>
           </li>
           <li className="font-semibold">
-            <Link href="#projects">Projects</Link>
+            <Link href="/projects">Projects</Link>
           </li>
           <li className="font-semibold">
-            <Link href="#testimonials">Testimonials</Link>
+            <Link href="/testimonials">Testimonials</Link>
           </li>
           <li className="font-semibold">
-            <Link href="#contact-us">Contact Us</Link>
+            <Link href="/contact">Contact Us</Link>
           </li>
         </ul>
       </div>
       <div className="navbar-end">
-        <Link href="#contact-us">
+        <Link href="/contact">
           <Button text="Let&#39;s get started" />
         </Link>
       </div>

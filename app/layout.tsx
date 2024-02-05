@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -20,9 +21,12 @@ export default function RootLayout({
 }>) {
   return (
     <html className="scroll-smooth" lang="en">
-      <body className={poppins.className}>
+      <body
+        className={`${poppins.className} bg-gradient-to-l from-slate-900 to-slate-950`}
+      >
         <Navbar />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
