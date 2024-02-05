@@ -1,13 +1,19 @@
+"use client";
+
+import { useState } from "react";
 import Button from "./Button";
 import Link from "next/link";
 
 export default function Navbar() {
+  const [show, setShow] = useState(false);
+
   return (
     <div id="home" className="navbar">
       <div className="navbar-start">
         <div className="dropdown">
           <div
             tabIndex={0}
+            onClick={() => setShow(!show)}
             role="button"
             aria-label="menu"
             className="btn btn-ghost lg:hidden"
@@ -29,19 +35,32 @@ export default function Navbar() {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-2xl rounded-box w-52"
+            className={
+              show
+                ? "hidden"
+                : "" +
+                  "menu menu-sm dropdown-content mt-3 z-[1] p-2 bg-slate-900 shadow-2xl rounded-box w-52"
+            }
           >
             <li className="font-semibold">
-              <Link href="/what-we-do">What we do?</Link>
+              <Link onClick={() => setShow(!show)} href="/what-we-do">
+                What we do?
+              </Link>
             </li>
             <li className="font-semibold">
-              <Link href="/projects">Projects</Link>
+              <Link onClick={() => setShow(!show)} href="/projects">
+                Projects
+              </Link>
             </li>
             <li className="font-semibold">
-              <Link href="/testimonials">Testimonials</Link>
+              <Link onClick={() => setShow(!show)} href="/testimonials">
+                Testimonials
+              </Link>
             </li>
             <li className="font-semibold">
-              <Link href="/contact">Contact Us</Link>
+              <Link onClick={() => setShow(!show)} href="/contact">
+                Contact Us
+              </Link>
             </li>
           </ul>
         </div>

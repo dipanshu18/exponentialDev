@@ -62,7 +62,7 @@ export default function ContactUsForm() {
       <Toaster richColors />
       <form
         onSubmit={handleSubmit(mailHandler)}
-        className="max-w-md md:max-w-xl lg:max-w-2xl mx-10 sm:mx-auto border border-slate-900 p-10 rounded-xl"
+        className="md:max-w-xl lg:max-w-2xl mx-10 sm:mx-auto border border-slate-900 p-10 rounded-xl"
       >
         <div className="mb-5">
           <label htmlFor="name" className="block mb-2 text-sm font-medium">
