@@ -1,3 +1,32 @@
+type NavbarLinkType = {
+  id: number;
+  title: string;
+  link: string;
+};
+
+export const navbarLinks: NavbarLinkType[] = [
+  {
+    id: 1,
+    title: "What we do?",
+    link: "/what-we-do",
+  },
+  {
+    id: 2,
+    title: "Projects",
+    link: "/projects",
+  },
+  {
+    id: 3,
+    title: "Testimonials",
+    link: "/testimonials",
+  },
+  {
+    id: 4,
+    title: "Contact us",
+    link: "/contact",
+  },
+];
+
 type WhatWeDoType = {
   id: number;
   icon: any;

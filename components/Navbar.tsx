@@ -4,6 +4,8 @@ import { useState } from "react";
 import Button from "./Button";
 import Link from "next/link";
 
+import { navbarLinks } from "@/utils/data";
+
 export default function Navbar() {
   const [show, setShow] = useState(false);
 
@@ -42,26 +44,16 @@ export default function Navbar() {
                   "menu menu-sm dropdown-content mt-3 z-[1] p-2 bg-slate-900 shadow-2xl rounded-box w-52"
             }
           >
-            <li className="font-semibold">
-              <Link onClick={() => setShow(!show)} href="/what-we-do">
-                What we do?
-              </Link>
-            </li>
-            <li className="font-semibold">
-              <Link onClick={() => setShow(!show)} href="/projects">
-                Projects
-              </Link>
-            </li>
-            <li className="font-semibold">
-              <Link onClick={() => setShow(!show)} href="/testimonials">
-                Testimonials
-              </Link>
-            </li>
-            <li className="font-semibold">
-              <Link onClick={() => setShow(!show)} href="/contact">
-                Contact Us
-              </Link>
-            </li>
+            {navbarLinks &&
+              navbarLinks.map((navbarLink) => {
+                return (
+                  <li key={navbarLink.id} className="font-semibold">
+                    <Link onClick={() => setShow(!show)} href={navbarLink.link}>
+                      {navbarLink.title}
+                    </Link>
+                  </li>
+                );
+              })}
           </ul>
         </div>
         <Link href="/" className="btn btn-ghost text-md md:text-xl">
