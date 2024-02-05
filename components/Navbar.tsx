@@ -62,18 +62,16 @@ export default function Navbar() {
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li className="font-semibold">
-            <Link href="/what-we-do">What we do?</Link>
-          </li>
-          <li className="font-semibold">
-            <Link href="/projects">Projects</Link>
-          </li>
-          <li className="font-semibold">
-            <Link href="/testimonials">Testimonials</Link>
-          </li>
-          <li className="font-semibold">
-            <Link href="/contact">Contact Us</Link>
-          </li>
+          {navbarLinks &&
+            navbarLinks.map((navbarLink) => {
+              return (
+                <li key={navbarLink.id} className="font-semibold">
+                  <Link onClick={() => setShow(!show)} href={navbarLink.link}>
+                    {navbarLink.title}
+                  </Link>
+                </li>
+              );
+            })}
         </ul>
       </div>
       <div className="navbar-end">
