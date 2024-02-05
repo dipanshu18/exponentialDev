@@ -68,10 +68,8 @@ export default function page() {
               <span>
                 Backend: Typescript, Node.js, Express, Python, Flask, Django
               </span>
-              <span>
-                Databases: PostgreSQL, MongoDB Tools: GraphQL, PrismaORM
-              </span>
-              <span>Cloud: AWS, Azure</span>
+              <span>Databases: PostgreSQL, MongoDB</span>
+              <span>Tools: GraphQL, PrismaORM, AWS, Azure</span>
             </p>
             <div className="card-actions mt-5">
               <Link href="https://www.linkedin.com/in/dipanshu-torawane/">
