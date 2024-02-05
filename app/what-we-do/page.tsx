@@ -14,7 +14,7 @@ export default function page() {
             return (
               <div
                 key={content.id}
-                className="card lg:w-1/4 border border-slate-900 shadow-2xl"
+                className="card lg:w-1/4 border border-slate-900 shadow-2xl transition-all duration-300 hover:scale-105"
               >
                 <figure className="pt-10 text-9xl">
                   <Icon />

@@ -14,7 +14,7 @@ export default function page() {
       </h1>
 
       <div className="mx-10 flex flex-col lg:flex-row items-center justify-center gap-4 md:gap-8">
-        <div className="card lg:w-1/2 border border-slate-900 shadow-2xl">
+        <div className="card lg:w-1/2 border border-slate-900 shadow-2xl transition-all duration-300 hover:scale-105">
           <figure className="pt-10 mx-10 rounded-full">
             <Image src={MoinPic} alt="Moin's Headshot" />
           </figure>
@@ -34,17 +34,17 @@ export default function page() {
               <span>Tools: PostgreSQL, MongoDB, AWS</span>
             </p>
             <div className="card-actions mt-5">
-              <Link href="/">
+              <Link href="https://www.linkedin.com/in/moin-hossain26/">
                 <Button text="Linkedin" icon={<FaLinkedin />} />
               </Link>
-              <Link href="/">
+              <Link href="https://twitter.com/Moin_Hossain26">
                 <Button text="Twitter" icon={<FaTwitter />} />
               </Link>
               <CopyPhoneNoButton number="+91-9167717292" />
             </div>
           </div>
         </div>
-        <div className="card lg:w-1/2 border border-slate-900 shadow-2xl">
+        <div className="card lg:w-1/2 border border-slate-900 shadow-2xl transition-all duration-300 hover:scale-105">
           <figure className="pt-10 mx-10 rounded-full">
             <Image src={DipanshuPic} alt="Dipanshu's Headshot" />
           </figure>

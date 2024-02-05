@@ -8,8 +8,8 @@ export default function page() {
       <h1 className="text-center font-extrabold text-4xl lg:text-5xl mb-14">
         Our Projects
       </h1>
-      <div className="max-w-4xl xl:max-w-5xl lg:mx-auto mx-10 grid md:grid-cols-2 lg:grid-cols-1 gap-10">
-        <div className="card lg:card-side border border-slate-900 shadow-2xl">
+      <div className="max-w-4xl xl:max-w-5xl lg:mx-auto mx-10 grid md:grid-cols-2 lg:grid-cols-1 gap-20">
+        <div className="card lg:card-side border border-slate-900 shadow-2xl transition-all duration-300 hover:scale-105 ">
           <figure>
             <Image src={Webpage} alt="Album" width={500} />
           </figure>
@@ -23,7 +23,7 @@ export default function page() {
           </div>
         </div>
 
-        <div className="card lg:card-side border border-slate-900 shadow-2xl">
+        <div className="card lg:card-side border border-slate-900 shadow-2xl transition-all duration-300 hover:scale-105">
           <figure>
             <Image src={Webpage} alt="Album" width={500} />
           </figure>
@@ -37,7 +37,7 @@ export default function page() {
           </div>
         </div>
 
-        <div className="card lg:card-side border border-slate-900 shadow-2xl">
+        <div className="card lg:card-side border border-slate-900 shadow-2xl transition-all duration-300 hover:scale-105">
           <figure>
             <Image src={Webpage} alt="Album" width={500} />
           </figure>
@@ -51,7 +51,7 @@ export default function page() {
           </div>
         </div>
 
-        <div className="card lg:card-side border border-slate-900 shadow-2xl">
+        <div className="card lg:card-side border border-slate-900 shadow-2xl transition-all duration-300 hover:scale-105">
           <figure>
             <Image src={Webpage} alt="Album" width={500} />
           </figure>

@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html className="scroll-smooth" lang="en">
       <body
-        className={`${poppins.className} bg-gradient-to-l from-slate-900 to-slate-950`}
+        className={`${poppins.className} bg-gradient-to-l from-slate-950 via-slate-900 to-slate-950`}
       >
         <Navbar />
         <main>{children}</main>
