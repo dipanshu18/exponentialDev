@@ -1,11 +1,10 @@
-import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const poppins = Poppins({
+const montserrat = Montserrat({
   subsets: ["latin"],
   weight: "300",
 });
@@ -22,22 +21,14 @@ export default function RootLayout({
 }>) {
   return (
     <html className="scroll-smooth" lang="en">
-      <head>
-        <link
-          rel="chart increasing icon"
-          href="/favicon.ico"
-          type="image/x-icon"
-        />
-      </head>
+      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
       <body
-        className={`${poppins.className} bg-gradient-to-l from-slate-950 via-slate-900 to-slate-950`}
+        className={`${montserrat.className} bg-gradient-to-l from-slate-950 via-slate-900 to-slate-950`}
       >
         <Navbar />
         <main>{children}</main>
         <Footer />
-
-        <Analytics />
       </body>
     </html>
   );
