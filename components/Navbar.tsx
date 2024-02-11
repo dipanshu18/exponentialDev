@@ -4,8 +4,6 @@ import { useState } from "react";
 import Button from "./Button";
 import Link from "next/link";
 
-import { navbarLinks } from "@/utils/data";
-
 export default function Navbar() {
   const [show, setShow] = useState(false);
 
@@ -41,19 +39,37 @@ export default function Navbar() {
               show
                 ? "hidden"
                 : "" +
-                  "menu menu-sm dropdown-content mt-3 z-[1] p-2 bg-slate-900 shadow-2xl rounded-box w-52"
+                  "menu menu-sm dropdown-content mt-3 z-[1] p-2 bg-slate-900 shadow-2xl rounded-box w-52 font-semibold"
             }
           >
-            {navbarLinks &&
-              navbarLinks.map((navbarLink) => {
-                return (
-                  <li key={navbarLink.id} className="font-semibold">
-                    <Link onClick={() => setShow(!show)} href={navbarLink.link}>
-                      {navbarLink.title}
-                    </Link>
-                  </li>
-                );
-              })}
+            <Link
+              onClick={() => setShow(!show)}
+              href="/what-we-do"
+              className="btn btn-ghost"
+            >
+              What we do
+            </Link>
+            <Link
+              onClick={() => setShow(!show)}
+              href="/projects"
+              className="btn btn-ghost"
+            >
+              Projects
+            </Link>
+            <Link
+              onClick={() => setShow(!show)}
+              href="/testimonials"
+              className="btn btn-ghost"
+            >
+              Testimonials
+            </Link>
+            <Link
+              onClick={() => setShow(!show)}
+              href="/contact"
+              className="btn btn-ghost"
+            >
+              Contact us
+            </Link>
           </ul>
         </div>
         <Link href="/" className="btn btn-ghost text-md md:text-xl">
@@ -61,17 +77,35 @@ export default function Navbar() {
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          {navbarLinks &&
-            navbarLinks.map((navbarLink) => {
-              return (
-                <li key={navbarLink.id} className="font-semibold">
-                  <Link onClick={() => setShow(!show)} href={navbarLink.link}>
-                    {navbarLink.title}
-                  </Link>
-                </li>
-              );
-            })}
+        <ul className="menu menu-horizontal px-1 font-semibold">
+          <Link
+            onClick={() => setShow(!show)}
+            href="/what-we-do"
+            className="btn btn-ghost"
+          >
+            What we do
+          </Link>
+          <Link
+            onClick={() => setShow(!show)}
+            href="/projects"
+            className="btn btn-ghost"
+          >
+            Projects
+          </Link>
+          <Link
+            onClick={() => setShow(!show)}
+            href="/testimonials"
+            className="btn btn-ghost"
+          >
+            Testimonials
+          </Link>
+          <Link
+            onClick={() => setShow(!show)}
+            href="/contact"
+            className="btn btn-ghost"
+          >
+            Contact us
+          </Link>
         </ul>
       </div>
       <div className="navbar-end">

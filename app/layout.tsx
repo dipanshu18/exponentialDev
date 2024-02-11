@@ -22,6 +22,14 @@ export default function RootLayout({
 }>) {
   return (
     <html className="scroll-smooth" lang="en">
+      <head>
+        <link
+          rel="chart increasing icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+        />
+      </head>
+
       <body
         className={`${poppins.className} bg-gradient-to-l from-slate-950 via-slate-900 to-slate-950`}
       >
