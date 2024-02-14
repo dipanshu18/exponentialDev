@@ -10,8 +10,12 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Exponential Dev",
-  description: "This is a landing page for Exponential Dev",
+  title: {
+    default: "Exponential Dev",
+    template: "%s - Exponential Dev",
+  },
+  description:
+    "This is a landing page for Exponential Dev where the services offered by them are listed and projects they have made. They are team of two people which are ready to deliver software solutions and can be contacted for discussion.",
 };
 
 export default function RootLayout({
@@ -21,7 +25,12 @@ export default function RootLayout({
 }>) {
   return (
     <html className="scroll-smooth" lang="en">
-      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+      <head>
+        <meta
+          name="google-site-verification"
+          content="G-ecnXsuzM_QGhL3KRifec9IhTndAYNGlgjzBtVsOWg"
+        />
+      </head>
 
       <body
         className={`${montserrat.className} bg-gradient-to-l from-slate-950 via-slate-900 to-slate-950`}

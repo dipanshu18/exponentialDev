@@ -1,10 +1,17 @@
 import Link from "next/link";
-import { FaLinkedin, FaTwitter } from "react-icons/fa6";
+import type { Metadata } from "next";
+
 import Image from "next/image";
 import MoinPic from "@/public/moin_headshot.png";
 import DipanshuPic from "@/public/dipanshu_headshot.png";
+
+import { FaLinkedin, FaTwitter } from "react-icons/fa6";
 import CopyPhoneNoButton from "@/components/CopyPhoneNoButton";
 import Button from "@/components/Button";
+
+export const metadata: Metadata = {
+  title: "Testimonials",
+};
 
 export default function page() {
   return (

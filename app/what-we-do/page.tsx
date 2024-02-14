@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
+
 import { whatwedo } from "@/utils/data";
+
+export const metadata: Metadata = {
+  title: "What we do?",
+};
 
 export default function page() {
   return (

@@ -1,6 +1,13 @@
-import Button from "@/components/Button";
+import type { Metadata } from "next";
+
 import Image from "next/image";
 import Webpage from "@/public/webpage.png";
+
+import Button from "@/components/Button";
+
+export const metadata: Metadata = {
+  title: "Projects",
+};
 
 export default function page() {
   return (
