@@ -42,42 +42,34 @@ export default function Navbar() {
                   "menu menu-sm dropdown-content mt-3 z-[1] p-2 bg-slate-900 shadow-2xl rounded-box w-52 font-semibold"
             }
           >
-            <li>
-              <Link
-                onClick={() => setShow(!show)}
-                href="/what-we-do"
-                className="btn btn-ghost"
-              >
-                What we do
-              </Link>
-            </li>
-            <li>
-              <Link
-                onClick={() => setShow(!show)}
-                href="/projects"
-                className="btn btn-ghost"
-              >
-                Projects
-              </Link>
-            </li>
-            <li>
-              <Link
-                onClick={() => setShow(!show)}
-                href="/testimonials"
-                className="btn btn-ghost"
-              >
-                Testimonials
-              </Link>
-            </li>
-            <li>
-              <Link
-                onClick={() => setShow(!show)}
-                href="/contact"
-                className="btn btn-ghost"
-              >
-                Contact us
-              </Link>
-            </li>
+            <Link
+              onClick={() => setShow(!show)}
+              href="/what-we-do"
+              className="btn btn-ghost"
+            >
+              What we do
+            </Link>
+            <Link
+              onClick={() => setShow(!show)}
+              href="/projects"
+              className="btn btn-ghost"
+            >
+              Projects
+            </Link>
+            <Link
+              onClick={() => setShow(!show)}
+              href="/testimonials"
+              className="btn btn-ghost"
+            >
+              Testimonials
+            </Link>
+            <Link
+              onClick={() => setShow(!show)}
+              href="/contact"
+              className="btn btn-ghost"
+            >
+              Contact us
+            </Link>
           </ul>
         </div>
         <Link href="/" className="btn btn-ghost text-md md:text-xl">
@@ -86,42 +78,34 @@ export default function Navbar() {
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 font-semibold">
-          <li>
-            <Link
-              onClick={() => setShow(!show)}
-              href="/what-we-do"
-              className="btn btn-ghost"
-            >
-              What we do
-            </Link>
-          </li>
-          <li>
-            <Link
-              onClick={() => setShow(!show)}
-              href="/projects"
-              className="btn btn-ghost"
-            >
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link
-              onClick={() => setShow(!show)}
-              href="/testimonials"
-              className="btn btn-ghost"
-            >
-              Testimonials
-            </Link>
-          </li>
-          <li>
-            <Link
-              onClick={() => setShow(!show)}
-              href="/contact"
-              className="btn btn-ghost"
-            >
-              Contact us
-            </Link>
-          </li>
+          <Link
+            onClick={() => setShow(!show)}
+            href="/what-we-do"
+            className="btn btn-ghost"
+          >
+            What we do
+          </Link>
+          <Link
+            onClick={() => setShow(!show)}
+            href="/projects"
+            className="btn btn-ghost"
+          >
+            Projects
+          </Link>
+          <Link
+            onClick={() => setShow(!show)}
+            href="/testimonials"
+            className="btn btn-ghost"
+          >
+            Testimonials
+          </Link>
+          <Link
+            onClick={() => setShow(!show)}
+            href="/contact"
+            className="btn btn-ghost"
+          >
+            Contact us
+          </Link>
         </ul>
       </div>
       <div className="navbar-end">
